@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/css/all.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <script src="assets/js/all.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="assets/css/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/samafarhang-style.css">
+    <title>signup step2</title>
+
+    <style>
+        p{
+            margin-bottom: 0;
+        }
+    input[type="radio"]{
+        visibility: hidden;
+        height: 0;
+        width: 0;
+        
+    }
+    label {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        cursor: pointer;
+        border: 1px #1C518D;
+        padding: 5px 10px;
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+        border: 1px solid #BEBEBE;
+    }
+    input[type="radio"]:checked + label{
+        border: 2px solid rgb(6, 166, 97);
+        color: rgb(6, 166, 97);
+        background-color: rgba(65, 202, 143, 0.312);
+        
+    }
+    body{
+        font-size: 14.5px;
+    }
+/* ******************************* */
+    .phone-pic{
+        width: 25%;
+    }
+    @media(max-width:768px){
+        .main{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+        .phone-pic{
+            width: 50%;
+        }
+    }
+    .input-step1{
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid #1c518d58;
+        background-color: #e7e7e750;
+    }
+    .input-number{
+        width: 85%;
+    }
+    .btn-code{
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        background-color: #1C518D;
+        color: #fff;
+    }
+    .form-step1{
+        display: flex;
+        justify-content: right;
+        width: 340px; 
+    }
+    .names-input{
+        width: 100%;
+        display: grid;
+        grid-template-areas:
+        'text1 text1'
+        'phone phone'
+        'female male'
+        'code code'
+        'question question'
+        ;
+        gap: 20px;
+}
+
+.male{grid-area: male;}
+.female{grid-area: female;}
+.text-step1 { grid-area: text1; }
+.input-fname { grid-area: fname; }
+.input-lname { grid-area: lname; }
+.input-phone { grid-area: phone; }
+.btn-code { grid-area: code; }
+.question { grid-area: question; }
+.space{grid-area: space1;}
+    @media(max-width:1200px){
+        .squares{
+            height: 78% ;
+            width: 85%;
+        }
+        .img-p{
+        max-width: 95%;
+        max-height: 95%;
+        grid-row-end: 4;
+        grid-column-end: 6;
+    }
+    }
+    @media(max-width:992px){
+        .main{
+            padding: 0px 50px 0px 50px;
+        }
+        .form-step1{
+            justify-content: start;
+            max-width: 750px ;
+        }
+        .names-input{
+        gap: 10px;
+    }
+        .squares{
+            height: 70% ;
+            width: 95%;
+        }
+
+    }
+    @media(max-width:768px){
+        .form-step1{
+        display: flex;
+        justify-content: center;
+        max-width: 350px;
+    }
+        .main{
+            padding: 10px;
+        }
+        .squares{
+            height: 95% ;
+            width: 75%;
+        }
+        .img-p{
+        max-width: 80%;
+        max-height: 85%;
+        grid-row-start: 1;
+        grid-row-end:5;
+        grid-column-start: 1;
+        grid-column-end: 8;
+        z-index: 2;
+    }
+
+    body{
+        font-size: 13px;
+    }
+    .names-input{
+        grid-template-areas:
+        'pic pic'
+        'text1 text1'
+        'phone phone'
+        'female  male'
+        'code code'
+        'question question';
+}
+.phone-pic{
+            width: 40%;
+        }
+
+    }
+@media(max-width:570px){
+        .squares{
+            height: 80% ;
+            width: 85%;
+        }
+        .img-p{
+        max-width: 80%;
+        max-height: 95%;
+        grid-row-start: 1;
+        grid-row-end: 6;
+        grid-column-start: 1;
+        grid-column-end: 8;
+        z-index: 2;
+    }
+}
+input,button ,label{
+        max-height: 45px;
+        
+    }
+    </style>
+
+</head>
+<body>
+    <div class="grid-all">
+        <div class="img-p"><img src="assets/img/purple-background-login.png" alt="" width="100%"></div>
+        <div class="flex-container">
+            <div class="squares">
+                <div class="shadow-square">
+                    <div class="main">
+                        <img class="phone-pic" src="assets/img/login-phone.png" alt="">
+                       <div class="form-step1">
+                        <div class="names-input" dir="rtl">
+                            <div class="text-step1">
+                                <p>کد تایید پیامک شده به شماره 09129876543 را وارد کنید</p>
+                               </div>
+                                <input type="radio" name="size" id="size_3" value="small" />
+                                <label class="male" for="size_3">مرد</label>
+                                <input type="radio" name="size" id="size_2" value="small" />
+                                <label class="female" for="size_2">زن</label>
+                            <input type="text" class="input-step1 input-phone">
+                            <button class="btn-code">تایید</button>
+                           <p class="question text-center"><a class="red-text" href="#" >تغییر شماره موبایل</a> 01:55 </p>
+                        </div>
+                       </div>
+                       </div>
+                </div>
+                <div class="square"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
